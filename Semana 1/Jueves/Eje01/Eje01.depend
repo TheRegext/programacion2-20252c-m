@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1755185569 source:e:\github\educacion\utn\programacion2-20252c-m\semana 1\jueves\eje01\main.cpp
+	<iostream>
+	"puntos.h"
+
+1755185915 e:\github\educacion\utn\programacion2-20252c-m\semana 1\jueves\eje01\puntos.h
+	<string>
+
+1755185618 source:e:\github\educacion\utn\programacion2-20252c-m\semana 1\jueves\eje01\puntos.cpp
+	<iostream>
+	"puntos.h"
+
