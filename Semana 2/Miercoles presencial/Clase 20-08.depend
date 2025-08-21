@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1755700496 source:c:\users\maxi_\desktop\clase 20-08\main.cpp
+	<iostream>
+	"funciones.h"
+
+1755701625 source:c:\users\maxi_\desktop\clase 20-08\funciones.cpp
+	<iostream>
+	"funciones.h"
+
+1755700520 c:\users\maxi_\desktop\clase 20-08\funciones.h
+
