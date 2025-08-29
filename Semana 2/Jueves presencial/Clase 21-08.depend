@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1755787675 source:c:\users\maxi_\desktop\clase 21-08\funciones.cpp
+	<iostream>
+	"funciones.h"
+	"tipos.h"
+
+1755785000 c:\users\maxi_\desktop\clase 21-08\funciones.h
+	"tipos.h"
+
+1755785227 source:c:\users\maxi_\desktop\clase 21-08\main.cpp
+	<iostream>
+	<cstring>
+	"funciones.h"
+
+1755787882 c:\users\maxi_\desktop\clase 21-08\tipos.h
+	<cstring>
+
+1755787882 source:c:\users\maxi_\desktop\clase 21-08\tipos.cpp
+	"tipos.h"
+
