@@ -1,0 +1,11 @@
+#include "Animal."
+
+Animal::Animal()
+{
+  //ctor
+}
+
+Animal::~Animal()
+{
+  //dtor
+}

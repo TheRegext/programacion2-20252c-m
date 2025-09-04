@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1756997532 source:e:\github\educacion\utn\programacion2-20252c-m\semana 4\jueves\poo-herencia\gato.cpp
+	<iostream>
+	"Gato.h"
+
+1756997492 e:\github\educacion\utn\programacion2-20252c-m\semana 4\jueves\poo-herencia\gato.h
+	"Animal.h"
+
+1756999628 e:\github\educacion\utn\programacion2-20252c-m\semana 4\jueves\poo-herencia\animal.h
+	<string>
+
+1756999238 source:e:\github\educacion\utn\programacion2-20252c-m\semana 4\jueves\poo-herencia\main.cpp
+	<iostream>
+	"Perro.h"
+	"Gato.h"
+
+1756998829 e:\github\educacion\utn\programacion2-20252c-m\semana 4\jueves\poo-herencia\perro.h
+	<string>
+	"Animal.h"
+
+1756998819 source:e:\github\educacion\utn\programacion2-20252c-m\semana 4\jueves\poo-herencia\perro.cpp
+	<iostream>
+	"Perro.h"
+
+1756999444 source:e:\github\educacion\utn\programacion2-20252c-m\semana 4\jueves\poo-herencia\animal.cpp
+	"Animal.h"
+
