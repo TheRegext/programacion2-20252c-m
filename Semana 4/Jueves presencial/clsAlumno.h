@@ -1,6 +1,9 @@
 #ifndef CLSALUMNO_H_INCLUDED
 #define CLSALUMNO_H_INCLUDED
 
+#include "clsFecha.h"
+#include "clsDomicilio.h"
+
 /**
 DESARROLLAR UNA CLASE Contador, QUE NOS PERMITA CONTAR
 COSAS.
@@ -18,40 +21,59 @@ PENSAR QUE PROPIEDADES Y COMPORTAMIENTOS NECESITA.
 //        void Mostrar();
 //};
 
-class Alumno{
-    private:
-        int legajo;
+/**
+AGREGARLE LA FUNCIONALIDAD NECESARIA PARA TRABAJAR CON
+LA PROPIEDAD fechaInscripcion.
+ADEMAS MODIFICAR LA CLASE PARA AGREGARLE EL DOMICILIO AL
+ALUMNO. UN DOMICILIO NECESITA ALMACENAR LO SIGUIENTE:
+-CALLE.
+-ALTURA.
+-CODIGO POSTAL.
+-LOCALIDAD.
+-PARTIDO.
+-PROVINCIA.
+*/
+
+
+class Persona{
+    protected:
         char nombre[30];
         char apellido[30];
         int dni;
-        int diaNacimiento;
-        int mesNacimiento;
-        int anioNacimiento;
+        char telefono[15];
+        Fecha fechaNacimiento;
+        Domicilio domicilio;
         char email[30];
     public:
+        Persona(const char *nom="S/N", const char *ape="S/A", int d=0, Fecha fN=Fecha(3,3,1989), const char *e="S/E");
         ///SETTERS
-        void setLegajo(int);
         void setNombre(const char *);
         void setApellido(const char *);
         void setDni(int);
-        void setDiaNacimiento(int);
-        void setMesNacimiento(int);
-        void setAnioNacimiento(int);
+        void setFechaNacimiento(Fecha);
         void setEmail(const char *);
         ///GETTERS
-        int getLegajo();
         const char *getNombre();
         const char *getApellido();
         int getDni();
-        int getDiaNacimiento();
-        int getMesNacimiento();
-        int getAnioNacimiento();
+        Fecha getFechaNacimiento();
         const char *getEmail();
         ///OTROS METODOS
         void Cargar();
         void Mostrar();
 };
 
+class Alumno : public Persona{
+    private:
+        int legajo;
+        Fecha fechaInscripcion;
+    public:
+        Alumno(int leg=0, Fecha fI=Fecha(12,12,2010));
+        void setLegajo(int);
+        int getLegajo();
+        void Cargar();
+        void Mostrar();
+};
 /**
 DESARROLLAR LA CLASE ALUMNO PARA INSTANCIAR OBJETOS CON
 LAS SIGUIENTES CARACTERISTICAS:

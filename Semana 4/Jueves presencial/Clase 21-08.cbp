@@ -38,6 +38,8 @@
 		<Unit filename="clsAlumno.h" />
 		<Unit filename="clsContador.cpp" />
 		<Unit filename="clsContador.h" />
+		<Unit filename="clsDomicilio.cpp" />
+		<Unit filename="clsDomicilio.h" />
 		<Unit filename="clsFecha.cpp" />
 		<Unit filename="clsFecha.h" />
 		<Unit filename="funciones.cpp" />

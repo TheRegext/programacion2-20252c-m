@@ -5,80 +5,95 @@
 
 using namespace std;
 
+Persona::Persona(const char *nom, const char *ape, int d, Fecha fN, const char *e){
+    strcpy(nombre, nom);
+    strcpy(apellido, ape);
+    dni = d;
+    fechaNacimiento = fN;
+    strcpy(email, e);
+}
+
+Alumno::Alumno(int leg, Fecha fI): Persona("S/N", "S/A", 0, Fecha(), "S/E"){
+    legajo = leg;
+    fechaInscripcion = fI;
+}
+
 ///SETTERS
 void Alumno::setLegajo(int leg){
     legajo = leg;
 }
-void Alumno::setNombre(const char *nom){
+void Persona::setNombre(const char *nom){
     strcpy(nombre, nom);
 }
-void Alumno::setApellido(const char *ape){
+void Persona::setApellido(const char *ape){
     strcpy(apellido, ape);
 }
-void Alumno::setDni(int d){
+void Persona::setDni(int d){
     dni = d;
 }
-void Alumno::setDiaNacimiento(int dia){
-    diaNacimiento = dia;
+void Persona::setFechaNacimiento(Fecha fN){
+    fechaNacimiento = fN;
 }
-void Alumno::setMesNacimiento(int mes){
-    mesNacimiento = mes;
-}
-void Alumno::setAnioNacimiento(int anio){
-    anioNacimiento = anio;
-}
-void Alumno::setEmail(const char *mail){
+void Persona::setEmail(const char *mail){
     strcpy(email, mail);
 }
 ///GETTERS
 int Alumno::getLegajo(){
     return legajo;
 }
-const char *Alumno::getNombre(){
+const char *Persona::getNombre(){
     return nombre;
 }
-const char *Alumno::getApellido(){
+const char *Persona::getApellido(){
     return apellido;
 }
-int Alumno::getDni(){
+int Persona::getDni(){
     return dni;
 }
-int Alumno::getDiaNacimiento(){
-    return diaNacimiento;
+Fecha Persona::getFechaNacimiento(){
+    return fechaNacimiento;
 }
-int Alumno::getMesNacimiento(){
-    return mesNacimiento;
-}
-int Alumno::getAnioNacimiento(){
-    return anioNacimiento;
-}
-const char *Alumno::getEmail(){
+const char *Persona::getEmail(){
     return email;
 }
 ///OTROS METODOS
-void Alumno::Cargar(){
-    cout<<"INGRESE EL LEGAJO: ";
-    cin>>legajo;
+
+void Persona::Cargar(){
     cout<<"INGRESE EL NOMBRE DEL ALUMNO: ";
-    cargarCadena(nombre, 29);
+    char nomAux[30];
+    cargarCadena(nomAux, 29);
+    setNombre(nomAux);
     cout<<"INGRESE EL APELLIDO DEL ALUMNO: ";
     cargarCadena(apellido,29);
     cout<<"INGRESE EL DNI: ";
     cin>>dni;
-    cout<<"INGRESE EL DIA DE NACIMIENTO: ";
-    cin>>diaNacimiento;
-    cout<<"INGRESE EL MES DE NACIMIENTO: ";
-    cin>>mesNacimiento;
-    cout<<"INGRESE EL AÑO DE NACIMIENTO: ";
-    cin>>anioNacimiento;
+    cout<<"INGRESE LA FECHA DE NACIMIENTO: "<<endl;
+    fechaNacimiento.Cargar();
+    cout<<"INGRESE EL DOMICILIO: "<<endl;
+    domicilio.Cargar();
     cout<<"INGRESE EL EMAIL: ";
     cargarCadena(email, 29);
 }
-void Alumno::Mostrar(){
-    cout<<"LEGAJO: "<<legajo<<endl;
+void Alumno::Cargar(){
+    cout<<"INGRESE EL LEGAJO: ";
+    cin>>legajo;
+    Persona::Cargar();
+    cout<<"INGRESE LA FECHA DE INSCRIPCION: "<<endl;
+    fechaInscripcion.Cargar();
+}
+void Persona::Mostrar(){
     cout<<"NOMBRE DEL ALUMNO: "<<nombre<<endl;
     cout<<"APELLIDO DEL ALUMNO: "<<apellido<<endl;
     cout<<"DNI: "<<dni<<endl;
-    cout<<"FECHA DE NACIMIENTO: "<<diaNacimiento<<"/"<<mesNacimiento<<"/"<<anioNacimiento<<endl;
+    cout<<"FECHA DE NACIMIENTO: ";
+    fechaNacimiento.Mostrar();
+    cout<<"DOMICILIO: "<<endl;
+    domicilio.Mostrar();
     cout<<"INGRESE EL EMAIL: "<<email<<endl;
+}
+void Alumno::Mostrar(){
+    cout<<"LEGAJO: "<<legajo<<endl;
+    Persona::Mostrar();
+    cout<<"FECHA DE INSCRIPCION: ";
+    fechaInscripcion.Mostrar();
 }

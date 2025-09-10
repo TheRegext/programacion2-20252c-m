@@ -2,7 +2,7 @@
 #include <cstring>
 #include "funciones.h"
 #include "clsContador.h"
-#include "clsFecha.h"
+#include "clsAlumno.h"
 
 using namespace std;
 
@@ -23,16 +23,36 @@ void funcionAlPepe(){
 
 int main(){
     setlocale(LC_ALL, "spanish");
-    Fecha fec(3,3,1989);
-    if(fec.getAnio()<2020){
-        cout<<"ES ANTERIOR AL 2020"<<endl;
+    FILE *p;
+    p = fopen("Alumnos.dat", "rb");///new
+    /**
+    fopen es una función que crea un vínculo entre mi programa
+    y el archivo. Este vínculo se guarda en el puntero FILE.
+    Los modos de apertura son:
+    -rb: Abre el archivo en modo lectura. NO crea archivos.
+    -ab: Abre el archivo en modo escritura. Si no existe, lo crea.
+        Siempre escribe al final del archivo.
+    -wb: Abre el archivo en modo escritura. SIEMPRE crea un archivo
+        vacío.
+    */
+    if(p == nullptr){
+        cout<<"ERROR AL ABRIR EL ARCHIVO"<<endl;
+        return -1;
     }
-    fec.Mostrar();
-    fec.Cargar();
-    if(fec.getAnio()<2020){
-        cout<<"ES ANTERIOR AL 2020"<<endl;
-    }
-    fec.Mostrar();
+    ///USO EL ARCHIVO
+    Alumno alu;
+    fread(&alu, sizeof (Alumno), 1, p);
+    /**
+    fread copia de mi archivo la cantidad de bytes que surge de
+    multiplicar el segundo y el tercer parámetro entre si y lo
+    guarda en la dirección de memoria del primer parámetro.
+    -El primer parámetro es la dirección de memoria donde
+    quiero copiar la información.
+    -El segundo es el tamaño de UN registro.
+    -El tercero es la cantidad de registros que quiero leer
+    -El cuarto es el vínculo con el archivo (puntero FILE).
+    */
+    fclose(p); ///delete[] p;
     return 0;
     Contador obj;
     //obj.establecerValorInicial(5);
