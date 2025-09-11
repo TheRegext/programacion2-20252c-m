@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1757603999 source:e:\github\educacion\utn\programacion2-20252c-m\semana 5\jueves\virtual\todolist\tarea.cpp
+	"Tarea.h"
+	<cstring>
+
+1757603978 e:\github\educacion\utn\programacion2-20252c-m\semana 5\jueves\virtual\todolist\tarea.h
+	<string>
+
+1757602514 source:e:\github\educacion\utn\programacion2-20252c-m\semana 5\jueves\virtual\todolist\tareaarchivo.cpp
+	<iostream>
+	"TareaArchivo.h"
+
+1757602402 e:\github\educacion\utn\programacion2-20252c-m\semana 5\jueves\virtual\todolist\tareaarchivo.h
+	"Tarea.h"
+
+1757603458 source:e:\github\educacion\utn\programacion2-20252c-m\semana 5\jueves\virtual\todolist\main.cpp
+	<iostream>
+	"Tarea.h"
+	"TareaArchivo.h"
+	"TareaManager.h"
+
+1757604074 e:\github\educacion\utn\programacion2-20252c-m\semana 5\jueves\virtual\todolist\tareamanager.h
+	"TareaArchivo.h"
+
+1757604169 source:e:\github\educacion\utn\programacion2-20252c-m\semana 5\jueves\virtual\todolist\tareamanager.cpp
+	<iostream>
+	"TareaManager.h"
+	"Tarea.h"
+
