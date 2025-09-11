@@ -1,0 +1,167 @@
+# depslib dependency file v1.0
+1756389081 source:c:\users\maxi_\desktop\clase 21-08\funciones.cpp
+	<iostream>
+	<cstring>
+	"funciones.h"
+	"clsAlumno.h"
+	"tipos.h"
+	"clsContador.h"
+
+1756389423 c:\users\maxi_\desktop\clase 21-08\funciones.h
+	"tipos.h"
+
+1756391756 source:c:\users\maxi_\desktop\clase 21-08\main.cpp
+	<iostream>
+	<cstring>
+	"funciones.h"
+	"clsContador.h"
+
+1756296576 c:\users\maxi_\desktop\clase 21-08\tipos.h
+	<cstring>
+
+1756391897 source:c:\users\maxi_\desktop\clase 21-08\tipos.cpp
+	"tipos.h"
+
+1756391756 source:c:\users\maxi_\desktop\clase 21-08\clsalumno.cpp
+	<iostream>
+	<cstring>
+	"cargarCadena.h"
+	"clsAlumno.h"
+
+1756391756 c:\users\maxi_\desktop\clase 21-08\clsalumno.h
+
+1756307115 source:c:\users\maxi_\desktop\clase 21-08\cargarcadena.cpp
+	<iostream>
+
+1756304369 c:\users\maxi_\desktop\clase 21-08\cargarcadena.h
+
+1756391756 c:\users\maxi_\desktop\clase 21-08\clscontador.h
+
+1756384691 source:c:\users\maxi_\desktop\clase 21-08\clscontador.cpp
+	<iostream>
+	"clsContador.h"
+
+1756392306 source:c:\users\maxi_\desktop\clase 21-08\clsfecha.cpp
+	<iostream>
+	"clsFecha.h"
+
+1756392306 c:\users\maxi_\desktop\clase 21-08\clsfecha.h
+
+1756307115 source:c:\users\maxi_\desktop\jueves presencial\cargarcadena.cpp
+	<iostream>
+
+1756384691 source:c:\users\maxi_\desktop\jueves presencial\clscontador.cpp
+	<iostream>
+	"clsContador.h"
+
+1756391756 c:\users\maxi_\desktop\jueves presencial\clscontador.h
+
+1756901019 source:c:\users\maxi_\desktop\jueves presencial\clsfecha.cpp
+	<iostream>
+	"clsFecha.h"
+
+1756901282 c:\users\maxi_\desktop\jueves presencial\clsfecha.h
+
+1756389081 source:c:\users\maxi_\desktop\jueves presencial\funciones.cpp
+	<iostream>
+	<cstring>
+	"funciones.h"
+	"clsAlumno.h"
+	"tipos.h"
+	"clsContador.h"
+
+1756389423 c:\users\maxi_\desktop\jueves presencial\funciones.h
+	"tipos.h"
+
+1756296576 c:\users\maxi_\desktop\jueves presencial\tipos.h
+	<cstring>
+
+1756910387 c:\users\maxi_\desktop\jueves presencial\clsalumno.h
+	"clsFecha.h"
+	"clsDomicilio.h"
+
+1756391897 source:c:\users\maxi_\desktop\jueves presencial\tipos.cpp
+	"tipos.h"
+
+1756900744 source:c:\users\maxi_\desktop\jueves presencial\clsalumno.cpp
+	<iostream>
+	<cstring>
+	"cargarCadena.h"
+	"clsAlumno.h"
+
+1756304369 c:\users\maxi_\desktop\jueves presencial\cargarcadena.h
+
+1756910476 source:c:\users\maxi_\desktop\jueves presencial\main.cpp
+	<iostream>
+	<cstring>
+	"funciones.h"
+	"clsContador.h"
+	"clsAlumno.h"
+
+1756910387 c:\users\maxi_\desktop\jueves presencial\clsdomicilio.h
+
+1756910387 source:c:\users\maxi_\desktop\jueves presencial\clsdomicilio.cpp
+	<iostream>
+	<cstring>
+	"cargarCadena.h"
+	"clsDomicilio.h"
+
+1756307115 source:c:\users\maxi_\desktop\semana 4\miercoles presencial\cargarcadena.cpp
+	<iostream>
+
+1756384691 source:c:\users\maxi_\desktop\semana 4\miercoles presencial\clscontador.cpp
+	<iostream>
+	"clsContador.h"
+
+1756391756 c:\users\maxi_\desktop\semana 4\miercoles presencial\clscontador.h
+
+1757506154 source:c:\users\maxi_\desktop\semana 4\miercoles presencial\clsdomicilio.cpp
+	<iostream>
+	<cstring>
+	"cargarCadena.h"
+	"clsDomicilio.h"
+
+1756304369 c:\users\maxi_\desktop\semana 4\miercoles presencial\cargarcadena.h
+
+1756910387 c:\users\maxi_\desktop\semana 4\miercoles presencial\clsdomicilio.h
+
+1756901019 source:c:\users\maxi_\desktop\semana 4\miercoles presencial\clsfecha.cpp
+	<iostream>
+	"clsFecha.h"
+
+1756901282 c:\users\maxi_\desktop\semana 4\miercoles presencial\clsfecha.h
+
+1756389081 source:c:\users\maxi_\desktop\semana 4\miercoles presencial\funciones.cpp
+	<iostream>
+	<cstring>
+	"funciones.h"
+	"clsAlumno.h"
+	"tipos.h"
+	"clsContador.h"
+
+1756389423 c:\users\maxi_\desktop\semana 4\miercoles presencial\funciones.h
+	"tipos.h"
+
+1756296576 c:\users\maxi_\desktop\semana 4\miercoles presencial\tipos.h
+	<cstring>
+
+1756997268 c:\users\maxi_\desktop\semana 4\miercoles presencial\clsalumno.h
+	"clsFecha.h"
+	"clsDomicilio.h"
+
+1756988174 source:c:\users\maxi_\desktop\semana 4\miercoles presencial\main.cpp
+	<iostream>
+	<cstring>
+	"funciones.h"
+	"clsContador.h"
+	"clsAlumno.h"
+
+1756391897 source:c:\users\maxi_\desktop\semana 4\miercoles presencial\tipos.cpp
+	"tipos.h"
+
+1757504566 source:c:\users\maxi_\desktop\semana 4\miercoles presencial\clsalumno.cpp
+	<iostream>
+	<cstring>
+	"cargarCadena.h"
+	"clsAlumno.h"
+

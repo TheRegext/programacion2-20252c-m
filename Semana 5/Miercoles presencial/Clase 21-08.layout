@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<FileVersion major="1" minor="0" />
+	<ActiveTarget name="Debug" />
+	<File name="tipos.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="14" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="77" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="main.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="14" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1795" topLine="23" />
+		</Cursor>
+	</File>
+	<File name="clsContador.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="11" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="183" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="tipos.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="10" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="688" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="funciones.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="15" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="168" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="funciones.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="20" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="198" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="clsDomicilio.cpp" open="1" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="13" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="816" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="clsFecha.cpp" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="17" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="417" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="clsDomicilio.h" open="1" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="6" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="303" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="clsContador.cpp" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="17" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="115" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="clsFecha.h" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="12" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="198" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="clsAlumno.h" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="16" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="784" topLine="55" />
+		</Cursor>
+	</File>
+	<File name="clsAlumno.cpp" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="10" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1905" topLine="67" />
+		</Cursor>
+	</File>
+</CodeBlocks_layout_file>
