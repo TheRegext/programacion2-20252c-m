@@ -2,19 +2,54 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="TareaArchivo.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="9" zoom_2="0">
+	<File name="TareaArchivo.cpp" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="12" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="283" topLine="6" />
+			<Cursor1 position="1262" topLine="75" />
 		</Cursor>
 	</File>
-	<File name="TareaManager.cpp" open="1" top="1" tabpos="7" split="0" active="1" splitpos="0" zoom_1="12" zoom_2="0">
+	<File name="Tarea.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="9" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="85" topLine="3" />
+			<Cursor1 position="604" topLine="6" />
+		</Cursor>
+	</File>
+	<File name="TareaArchivo.h" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="10" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="228" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="TareaManager.cpp" open="1" top="1" tabpos="2" split="0" active="1" splitpos="0" zoom_1="12" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3337" topLine="158" />
+		</Cursor>
+	</File>
+	<File name="Tarea.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="12" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="962" topLine="8" />
+		</Cursor>
+	</File>
+	<File name="AppMenu.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="8" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="452" topLine="15" />
+		</Cursor>
+	</File>
+	<File name="TareaMenu.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="12" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1514" topLine="48" />
+		</Cursor>
+	</File>
+	<File name="TareaMenu.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="17" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="73" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="main.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="15" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="636" topLine="10" />
+			<Cursor1 position="118" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="TareaManager.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="10" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="250" topLine="0" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>
