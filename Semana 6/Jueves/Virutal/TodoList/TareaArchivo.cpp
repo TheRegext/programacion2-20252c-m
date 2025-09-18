@@ -73,6 +73,27 @@ Tarea TareaArchivo::leer(int pos)
   return registro;
 }
 
+
+
+int TareaArchivo::leerTodos(Tarea tareas[], int cantidad)
+{
+  int result;
+  FILE *pFile;
+
+  pFile = fopen(_nombreArchivo.c_str(), "rb");
+
+  if(pFile == nullptr)
+  {
+    return 0;
+  }
+
+  result = fread(tareas, sizeof(Tarea), cantidad, pFile);
+
+  fclose(pFile);
+
+  return result;
+}
+
 int TareaArchivo::getCantidadRegistros()
 {
   int cantidad;

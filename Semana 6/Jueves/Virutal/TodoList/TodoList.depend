@@ -34,10 +34,10 @@
 1758203916 e:\github\educacion\utn\programacion2-20252c-m\semana 6\jueves\virutal\todolist\tarea.h
 	<string>
 
-1758202755 e:\github\educacion\utn\programacion2-20252c-m\semana 6\jueves\virutal\todolist\tareaarchivo.h
+1758206244 e:\github\educacion\utn\programacion2-20252c-m\semana 6\jueves\virutal\todolist\tareaarchivo.h
 	"Tarea.h"
 
-1758204057 e:\github\educacion\utn\programacion2-20252c-m\semana 6\jueves\virutal\todolist\tareamanager.h
+1758204846 e:\github\educacion\utn\programacion2-20252c-m\semana 6\jueves\virutal\todolist\tareamanager.h
 	"TareaArchivo.h"
 
 1758202957 source:e:\github\educacion\utn\programacion2-20252c-m\semana 6\jueves\virutal\todolist\tareaarchivo.cpp
@@ -48,7 +48,7 @@
 	"Tarea.h"
 	<cstring>
 
-1758204184 source:e:\github\educacion\utn\programacion2-20252c-m\semana 6\jueves\virutal\todolist\tareamanager.cpp
+1758206228 source:e:\github\educacion\utn\programacion2-20252c-m\semana 6\jueves\virutal\todolist\tareamanager.cpp
 	<iostream>
 	"TareaManager.h"
 	"Tarea.h"
@@ -56,7 +56,7 @@
 1758197251 e:\github\educacion\utn\programacion2-20252c-m\semana 6\jueves\virutal\todolist\tareamenu.h
 	"TareaManager.h"
 
-1758204269 source:e:\github\educacion\utn\programacion2-20252c-m\semana 6\jueves\virutal\todolist\tareamenu.cpp
+1758204836 source:e:\github\educacion\utn\programacion2-20252c-m\semana 6\jueves\virutal\todolist\tareamenu.cpp
 	<iostream>
 	"TareaMenu.h"
 

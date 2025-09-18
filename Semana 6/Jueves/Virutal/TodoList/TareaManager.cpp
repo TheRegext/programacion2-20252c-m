@@ -156,7 +156,41 @@ void TareaManager::eliminarTarea()
   {
     cout << "La tarea no existe en el archivo" << endl;
   }
+}
 
 
+void TareaManager::mostrarTareasOrdenadas(){
+  cout << "Lista de tareas ------  "<<endl;;
+  int cantidad = _repo.getCantidadRegistros();
+  /// usar memoria dinamica con objetos
+  
+  Tarea *tareas;
+  
+  tareas = new Tarea[cantidad];
+  
+  _repo.leerTodos(tareas, cantidad);
+  
+  /// 
+  for(int i=0; i<cantidad-1; i++){
+    bool intercambio = false;
+    for(int j=0; j < cantidad - i - 1; j++){
+      if(tareas[j].getDescripcion() > tareas[j+1].getDescripcion()){
+        Tarea aux = tareas[j];
+        tareas[j] = tareas[j+1];
+        tareas[j+1] = aux;
+        intercambio = true;
+      }
+    }  
+    if(!intercambio){
+      break;   /// corta el ciclo si ya esta ordenado 
+    }
+  }
+  
+  for(int i=0; i<cantidad; i++)
+  {
+    mostrarTareaLista(tareas[i]);
+  }
+  
+  delete [] tareas;
 }
 

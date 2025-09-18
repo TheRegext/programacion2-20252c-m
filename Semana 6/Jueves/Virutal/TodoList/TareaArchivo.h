@@ -14,6 +14,7 @@ class TareaArchivo
     bool eliminar(int pos);
     
     Tarea leer(int pos);
+    int leerTodos(Tarea tareas[], int cantidad);
     int getCantidadRegistros();
     int getNuevoID();
 
