@@ -47,19 +47,18 @@ void TareaManager::cargarTarea()
 
 void TareaManager::mostrarTareas()
 {
-  cout << "Lista de tareas ------  ";
+  cout << "Lista de tareas ------  "<<endl;;
   int cantidad = _repo.getCantidadRegistros();
 
   for(int i=0; i<cantidad; i++)
   {
     mostrarTareaLista(_repo.leer(i));
   }
-
 }
 
 void TareaManager::mostrarTareasFaltantes()
 {
-  cout << "Lista de tareas pendientes  ------  ";
+  cout << "Lista de tareas pendientes  ------  "<<endl;
   int cantidad = _repo.getCantidadRegistros();
 
   for(int i=0; i<cantidad; i++)
@@ -77,6 +76,87 @@ void TareaManager::mostrarTareaLista(const Tarea &tarea)
 {
   cout << tarea.getID()
        << " - "  << tarea.getDescripcion()
-       << " ---> " << (tarea.getEstado() ? "Realizada" : "No realizada") << endl;
+       << " ---> " << (tarea.getEstado() ? "Realizada" : "No realizada")
+       <<" -- " << (tarea.getEliminado() ? "Eliminado" : "Activo")  << endl;
+}
+
+
+void TareaManager::marcarTarea()
+{
+  int id, pos;
+  Tarea tarea;
+  bool estado;
+  cout << "---- Marcar Tarea "<<endl;
+  cout << "Ingrese ID tarea: ";
+  cin >> id;
+
+  pos = _repo.buscarID(id);
+
+  if(pos != -1)
+  {
+    tarea = _repo.leer(pos);
+
+    cout << "Tarea a Modificar: "<<endl;
+    mostrarTareaLista(tarea);
+
+    cout << "Ingrese 1- completo, 0- pendiente :";
+    cin >> estado;
+
+    tarea.setEstado(estado);
+
+    if(_repo.guardar(pos, tarea))
+    {
+      cout << "La tarea fue actualizada con exito!" << endl;
+    }
+    else
+    {
+      cout << "Ocurrio un error al intentar actualizar la tarea." <<endl;
+    }
+  }
+  else
+  {
+    cout << "La tarea no existe en el archivo" << endl;
+  }
+}
+
+void TareaManager::eliminarTarea()
+{
+  int id, pos;
+  Tarea tarea;
+  char respuesta;
+  cout << "---- Eliminar Tarea "<<endl;
+  cout << "Ingrese ID tarea: ";
+  cin >> id;
+
+  pos = _repo.buscarID(id);
+
+  if(pos != -1)
+  {
+    tarea = _repo.leer(pos);
+
+    cout << "Tarea a eliminar: "<<endl;
+    mostrarTareaLista(tarea);
+
+    cout << "Esta segudro de que lo queire eliminar ? (S/N):";
+    cin >> respuesta;
+
+    if(respuesta == 'S' || respuesta == 's')
+    {
+      if(_repo.eliminar(pos))
+      {
+        cout << "La tarea fue eliminada con exito!" << endl;
+      }
+      else
+      {
+        cout << "Ocurrio un error al intentar actualizar la tarea." <<endl;
+      }
+    }
+   }
+  else
+  {
+    cout << "La tarea no existe en el archivo" << endl;
+  }
+
+
 }
 

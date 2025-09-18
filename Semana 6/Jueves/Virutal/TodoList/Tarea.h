@@ -15,12 +15,16 @@ class Tarea
     std::string getDescripcion() const;
     void setDescripcion(std::string descripcion);
     
+    bool getEliminado() const;
+    void setEliminado(bool eliminado);
+    
     /// helpers
     bool estaTerminado();
   private:
     int _id;
     char _descripcion[300];
     bool _estado;
+    bool _eliminado;   
 };
 
 

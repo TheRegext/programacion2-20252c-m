@@ -15,14 +15,33 @@ bool TareaArchivo::guardar(const Tarea &registro)
   bool result;
   FILE *pFile;
   
-  // registro.setID(getNuevoID());
-
   pFile = fopen(_nombreArchivo.c_str(), "ab");
 
   if(pFile == nullptr)
   {
     return false;
   }
+
+  result = fwrite(&registro, sizeof(Tarea), 1, pFile);
+
+  fclose(pFile);
+
+  return result;
+}
+
+bool TareaArchivo::guardar(int pos, const Tarea &registro)
+{
+  bool result;
+  FILE *pFile;
+
+  pFile = fopen(_nombreArchivo.c_str(), "rb+");
+
+  if(pFile == nullptr)
+  {
+    return false;
+  }
+
+  fseek(pFile, sizeof(Tarea)*pos, SEEK_SET);
 
   result = fwrite(&registro, sizeof(Tarea), 1, pFile);
 
@@ -76,4 +95,40 @@ int TareaArchivo::getCantidadRegistros()
 
 int TareaArchivo::getNuevoID(){
   return getCantidadRegistros() + 1;
+}
+
+
+int TareaArchivo::buscarID(int id){
+  Tarea registro;
+  FILE *pFile;
+  int pos = -1;
+
+  pFile = fopen(_nombreArchivo.c_str(), "rb");
+
+  if(pFile == nullptr)
+  {
+    return pos;
+  }
+
+  while(fread(&registro, sizeof(Tarea), 1, pFile)){
+    if(registro.getID() == id){
+      pos = ftell(pFile) / sizeof(Tarea) - 1;
+      break; /// corta el ciclo repetitivo
+    }  
+  }
+  
+  fclose(pFile);
+
+  return pos;
+}
+
+bool TareaArchivo::eliminar(int pos){
+  Tarea registro = leer(pos);
+  if(registro.getID() == -1){
+    return false;  
+  }
+  
+  registro.setEliminado(true);
+  
+  return guardar(pos, registro);
 }

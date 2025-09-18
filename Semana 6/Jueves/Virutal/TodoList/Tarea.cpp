@@ -52,3 +52,11 @@ void Tarea::setDescripcion(string descripcion){
 bool Tarea::estaTerminado(){
   return getEstado();
 }
+
+bool Tarea::getEliminado() const{
+  return _eliminado;
+}
+
+void Tarea::setEliminado(bool eliminado){
+  _eliminado = eliminado;
+}

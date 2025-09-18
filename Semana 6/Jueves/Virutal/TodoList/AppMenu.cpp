@@ -20,7 +20,9 @@ void AppMenu::mostrar(){
 void AppMenu::mostrarOpciones(){
   cout << "--- MENU PRINCIPAL ---" << endl;
   cout << "1 - TAREAS " << endl;
-  cout << "--------------------"<<endl;
+  cout << "----------------------" << endl;
+  cout << "0 - SALIR" << endl;
+  cout << "----------------------"<<endl;
 }
 
 int AppMenu::seleccionarOpciones(){

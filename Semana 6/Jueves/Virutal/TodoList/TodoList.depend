@@ -31,24 +31,24 @@
 	<iostream>
 	"AppMenu.h"
 
-1758196136 e:\github\educacion\utn\programacion2-20252c-m\semana 6\jueves\virutal\todolist\tarea.h
+1758203916 e:\github\educacion\utn\programacion2-20252c-m\semana 6\jueves\virutal\todolist\tarea.h
 	<string>
 
-1757602402 e:\github\educacion\utn\programacion2-20252c-m\semana 6\jueves\virutal\todolist\tareaarchivo.h
+1758202755 e:\github\educacion\utn\programacion2-20252c-m\semana 6\jueves\virutal\todolist\tareaarchivo.h
 	"Tarea.h"
 
-1757604074 e:\github\educacion\utn\programacion2-20252c-m\semana 6\jueves\virutal\todolist\tareamanager.h
+1758204057 e:\github\educacion\utn\programacion2-20252c-m\semana 6\jueves\virutal\todolist\tareamanager.h
 	"TareaArchivo.h"
 
-1757602514 source:e:\github\educacion\utn\programacion2-20252c-m\semana 6\jueves\virutal\todolist\tareaarchivo.cpp
+1758202957 source:e:\github\educacion\utn\programacion2-20252c-m\semana 6\jueves\virutal\todolist\tareaarchivo.cpp
 	<iostream>
 	"TareaArchivo.h"
 
-1757604266 source:e:\github\educacion\utn\programacion2-20252c-m\semana 6\jueves\virutal\todolist\tarea.cpp
+1758203094 source:e:\github\educacion\utn\programacion2-20252c-m\semana 6\jueves\virutal\todolist\tarea.cpp
 	"Tarea.h"
 	<cstring>
 
-1757604366 source:e:\github\educacion\utn\programacion2-20252c-m\semana 6\jueves\virutal\todolist\tareamanager.cpp
+1758204184 source:e:\github\educacion\utn\programacion2-20252c-m\semana 6\jueves\virutal\todolist\tareamanager.cpp
 	<iostream>
 	"TareaManager.h"
 	"Tarea.h"
@@ -56,10 +56,14 @@
 1758197251 e:\github\educacion\utn\programacion2-20252c-m\semana 6\jueves\virutal\todolist\tareamenu.h
 	"TareaManager.h"
 
-1758197520 source:e:\github\educacion\utn\programacion2-20252c-m\semana 6\jueves\virutal\todolist\tareamenu.cpp
+1758204269 source:e:\github\educacion\utn\programacion2-20252c-m\semana 6\jueves\virutal\todolist\tareamenu.cpp
 	<iostream>
 	"TareaMenu.h"
 
 1758197882 e:\github\educacion\utn\programacion2-20252c-m\semana 6\jueves\virutal\todolist\appmenu.h
 	"TareaMenu.h"
+
+1758199772 source:e:\github\educacion\utn\programacion2-20252c-m\semana 6\jueves\virutal\todolist\appmenu.cpp
+	<iostream>
+	"AppMenu.h"
 

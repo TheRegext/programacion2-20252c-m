@@ -23,8 +23,10 @@ void TareaMenu::mostrarOpciones(){
   cout << "1 - CREAR TAREA " << endl;
   cout << "2 - MOSTRAR TAREAS " << endl;
   cout << "3 - ELEMINAR TAREA " << endl;
-  cout << "4 - MODIFICAR TAREA " << endl;
+  cout << "4 - MARCAR TAREA " << endl;
   cout << "5 - MOSTRAR TAREAS PENDIENTES " << endl;
+  cout << "---------------------------------" << endl;
+  cout << "0 - SALIR" << endl;
   cout << "--------------------"<<endl;
 }
 
@@ -52,8 +54,10 @@ void TareaMenu::ejecutarOpcion(int opcion){
     _tareaManager.mostrarTareas();
   break;
   case 3:
+    _tareaManager.eliminarTarea();
   break;
   case 4:
+    _tareaManager.marcarTarea();
   break;
   case 5:
     _tareaManager.mostrarTareasFaltantes();

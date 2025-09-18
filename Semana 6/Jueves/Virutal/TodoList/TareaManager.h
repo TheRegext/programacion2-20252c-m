@@ -10,6 +10,8 @@ class TareaManager
     void cargarTarea();
     void mostrarTareas();
     void mostrarTareasFaltantes();
+    void marcarTarea();
+    void eliminarTarea();
     
   protected:
     void mostrarTareaLista(const Tarea &tarea);
