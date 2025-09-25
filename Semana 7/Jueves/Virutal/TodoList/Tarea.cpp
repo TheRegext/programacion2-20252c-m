@@ -21,9 +21,10 @@ Tarea::Tarea()
   
 }
 
-Tarea::Tarea(int id, string descripcion, bool estado){
+Tarea::Tarea(int id, string descripcion, int idPersonal, bool estado){
   setID(id);
   setDescripcion(descripcion);
+  setIDPersonal(idPersonal);
   setEstado(estado);
 }
 
@@ -61,4 +62,12 @@ bool Tarea::getEliminado() const{
 
 void Tarea::setEliminado(bool eliminado){
   _eliminado = eliminado;
+}
+
+int Tarea::getIDPersonal() const{
+  return _idPersonal;
+}
+
+void Tarea::setIDPersonal(int idPersonal){
+  _idPersonal = idPersonal;
 }

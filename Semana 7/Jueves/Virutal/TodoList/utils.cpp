@@ -14,3 +14,15 @@ std::string cargarCadena()
 
   return texto;
 }
+
+int buscarMaximo(int vec[], int cant){
+  int indexMax = 0;
+  
+  for(int i=1; i<cant; i++){
+    if(vec[i] > vec[indexMax]){
+      indexMax = i;    
+    }  
+  }
+  
+  return indexMax;
+}

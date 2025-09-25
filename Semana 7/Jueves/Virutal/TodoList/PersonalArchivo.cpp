@@ -29,6 +29,31 @@ bool PersonalArchivo::guardar(const Personal &registro)
   return result;
 }
 
+
+Personal PersonalArchivo::leer(int pos)
+{
+  Personal registro;
+  bool result;
+  FILE *pFile;
+
+  pFile = fopen(_nombreArchivo.c_str(), "rb");
+
+  if(pFile == nullptr)
+  {
+    registro.setID(-1);
+    return registro;
+  }
+
+  fseek(pFile, sizeof(Personal)*pos, SEEK_SET);
+
+  fread(&registro, sizeof(Personal), 1, pFile);
+
+  fclose(pFile);
+
+  return registro;
+}
+
+
 int PersonalArchivo::leerTodos(Personal personales[], int cantidad)
 {
   int result;

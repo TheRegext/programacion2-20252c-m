@@ -2,6 +2,7 @@
 #include "TareaManager.h"
 #include "Tarea.h"
 #include "utils.h"
+#include "Personal.h"
 using namespace std;
 
 
@@ -14,6 +15,10 @@ void TareaManager::cargarTarea()
 {
   int id;
   string descripcion;
+  int idPersonal, posPersonal;
+  Personal personal;
+  posPersonal = -1;
+
 
   id = _repo.getNuevoID();
 
@@ -21,7 +26,35 @@ void TareaManager::cargarTarea()
   cout << "Ingrese descripcion: ";
   descripcion = cargarCadena();
 
-  if(_repo.guardar(Tarea(id, descripcion, false)))
+  do
+  {
+    cout << "ID Personal (0 sin asignar): ";
+    cin >> idPersonal;
+
+    if(idPersonal != 0)
+    {
+      posPersonal = _repoPersonal.buscarID(idPersonal);
+
+      if(posPersonal == -1)
+      {
+        cout << "El personal no existe!" << endl;
+      }
+    }
+  }
+  while(posPersonal == -1 && idPersonal != 0);
+
+  if(idPersonal == 0)
+  {
+    cout << "Sin personal asignado" << endl;
+  }
+  else
+  {
+    Personal p;
+    p=_repoPersonal.leer(posPersonal);
+    cout << "El personal asignado es: " << p.getNombre() << endl;
+  }
+
+  if(_repo.guardar(Tarea(id, descripcion, idPersonal, false)))
   {
     cout << "La tarea fue guardad con exito!" << endl;
   }
@@ -60,10 +93,29 @@ void TareaManager::mostrarTareasFaltantes()
 
 void TareaManager::mostrarTareaLista(const Tarea &tarea)
 {
-  cout << tarea.getID()
-       << " - "  << tarea.getDescripcion()
-       << " ---> " << (tarea.getEstado() ? "Realizada" : "No realizada")
-       <<" -- " << (tarea.getEliminado() ? "Eliminado" : "Activo")  << endl;
+  cout << "-----------------------------------" << endl;
+  cout << "ID: " << tarea.getID() << endl;
+  cout << "Descripcion: " << tarea.getDescripcion() << endl;
+  cout << "Personal: ";
+  if(tarea.getIDPersonal() == 0)
+  {
+    cout << "Sin personal asignado.";
+  }
+  else
+  {
+    int pos = _repoPersonal.buscarID(tarea.getIDPersonal());
+    if(pos != -1)
+    {
+      cout << _repoPersonal.leer(pos).getNombre();
+    }
+    else
+    {
+      cout << "Personal no encontrado (#"<<tarea.getIDPersonal()<<")";
+    }
+  }
+  cout << endl;
+  cout << "Estado: " << (tarea.getEstado() ? "Realizada" : "No realizada") << endl;
+  cout << "Eliminado: " << (tarea.getEliminado() ? "Eliminado" : "Activo")  << endl;
 }
 
 
@@ -137,7 +189,7 @@ void TareaManager::eliminarTarea()
         cout << "Ocurrio un error al intentar actualizar la tarea." <<endl;
       }
     }
-   }
+  }
   else
   {
     cout << "La tarea no existe en el archivo" << endl;
@@ -145,38 +197,43 @@ void TareaManager::eliminarTarea()
 }
 
 
-void TareaManager::mostrarTareasOrdenadas(){
+void TareaManager::mostrarTareasOrdenadas()
+{
   cout << "Lista de tareas ------  "<<endl;;
   int cantidad = _repo.getCantidadRegistros();
   /// usar memoria dinamica con objetos
-  
+
   Tarea *tareas;
-  
+
   tareas = new Tarea[cantidad];
-  
+
   _repo.leerTodos(tareas, cantidad);
-  
-  /// 
-  for(int i=0; i<cantidad-1; i++){
+
+  ///
+  for(int i=0; i<cantidad-1; i++)
+  {
     bool intercambio = false;
-    for(int j=0; j < cantidad - i - 1; j++){
-      if(tareas[j].getDescripcion() > tareas[j+1].getDescripcion()){
+    for(int j=0; j < cantidad - i - 1; j++)
+    {
+      if(tareas[j].getDescripcion() > tareas[j+1].getDescripcion())
+      {
         Tarea aux = tareas[j];
         tareas[j] = tareas[j+1];
         tareas[j+1] = aux;
         intercambio = true;
       }
-    }  
-    if(!intercambio){
-      break;   /// corta el ciclo si ya esta ordenado 
+    }
+    if(!intercambio)
+    {
+      break;   /// corta el ciclo si ya esta ordenado
     }
   }
-  
+
   for(int i=0; i<cantidad; i++)
   {
     mostrarTareaLista(tareas[i]);
   }
-  
+
   delete [] tareas;
 }
 

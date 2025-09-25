@@ -5,7 +5,7 @@ class Tarea
 {
   public: /// interface del objeto
     Tarea();
-    Tarea(int id, std::string descripcion, bool estado = false);
+    Tarea(int id, std::string descripcion, int idPersonal, bool estado = false);
     int getID() const;
     void setID(int id);
     
@@ -18,6 +18,9 @@ class Tarea
     bool getEliminado() const;
     void setEliminado(bool eliminado);
     
+    int getIDPersonal() const;
+    void setIDPersonal(int idPersonal);
+    
     /// helpers
     bool estaTerminado();
   private:
@@ -25,6 +28,7 @@ class Tarea
     char _descripcion[300];
     bool _estado;
     bool _eliminado;   
+    int _idPersonal;
 };
 
 

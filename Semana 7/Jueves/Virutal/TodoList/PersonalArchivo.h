@@ -8,6 +8,7 @@ class PersonalArchivo
     PersonalArchivo(std::string nombreArchivo = "personal.dat");
     bool guardar(const Personal &registro);
     int buscarID(int id);
+    Personal leer(int pos);
     
     int leerTodos(Personal tareas[], int cantidad);
     int getCantidadRegistros();

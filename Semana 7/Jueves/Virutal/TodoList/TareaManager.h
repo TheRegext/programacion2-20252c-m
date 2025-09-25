@@ -1,6 +1,6 @@
 #pragma once
 #include "TareaArchivo.h"
-
+#include "PersonalArchivo.h"
 
 class TareaManager
 {
@@ -18,4 +18,5 @@ class TareaManager
     void mostrarTareaLista(const Tarea &tarea);
   private:
     TareaArchivo _repo;
+    PersonalArchivo _repoPersonal;
 };

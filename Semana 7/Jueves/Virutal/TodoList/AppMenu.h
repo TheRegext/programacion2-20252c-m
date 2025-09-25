@@ -2,6 +2,7 @@
 #include "Menu.h"
 #include "TareaMenu.h"
 #include "PersonalMenu.h"
+#include "ReporteMenu.h"
 
 class AppMenu: public Menu
 {
@@ -14,4 +15,5 @@ void mostrarOpciones();
     
     TareaMenu _tareaMenu;
     PersonalMenu _personalMenu;
+    ReporteMenu _reporteMenu;
 };

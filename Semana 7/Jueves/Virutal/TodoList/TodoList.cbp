@@ -48,6 +48,10 @@
 		<Unit filename="PersonalManager.h" />
 		<Unit filename="PersonalMenu.cpp" />
 		<Unit filename="PersonalMenu.h" />
+		<Unit filename="ReporteManager.cpp" />
+		<Unit filename="ReporteManager.h" />
+		<Unit filename="ReporteMenu.cpp" />
+		<Unit filename="ReporteMenu.h" />
 		<Unit filename="Tarea.cpp" />
 		<Unit filename="Tarea.h" />
 		<Unit filename="TareaArchivo.cpp" />
@@ -56,7 +60,6 @@
 		<Unit filename="TareaManager.h" />
 		<Unit filename="TareaMenu.cpp" />
 		<Unit filename="TareaMenu.h" />
-		<Unit filename="ficticio.cpp" />
 		<Unit filename="main.cpp" />
 		<Unit filename="utils.cpp" />
 		<Unit filename="utils.h">

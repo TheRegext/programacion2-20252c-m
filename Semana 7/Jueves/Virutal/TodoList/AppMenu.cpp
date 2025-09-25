@@ -3,13 +3,14 @@
 using namespace std;
 
 AppMenu::AppMenu(){
-  _cantidadOpciones = 2;
+  _cantidadOpciones = 3;
 }
 
 void AppMenu::mostrarOpciones(){
   cout << "--- MENU PRINCIPAL ---" << endl;
   cout << "1 - TAREAS " << endl;
   cout << "2 - PERSONAL " << endl;
+  cout << "3 - REPORTES" << endl;
   cout << "----------------------" << endl;
   cout << "0 - SALIR" << endl;
   cout << "----------------------"<<endl;
@@ -22,6 +23,9 @@ void AppMenu::ejecutarOpcion(int opcion){
   break;
   case 2:
     _personalMenu.mostrar();
+    break;  
+  case 3:
+    _reporteMenu.mostrar();
     break;  
   }
 }

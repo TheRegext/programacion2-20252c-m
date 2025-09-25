@@ -67,33 +67,35 @@
 	<iostream>
 	"AppMenu.h"
 
-1758802185 source:e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\appmenu.cpp
+1758810824 source:e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\appmenu.cpp
 	<iostream>
 	"AppMenu.h"
 
-1758802407 e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\appmenu.h
+1758810824 e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\appmenu.h
 	"Menu.h"
 	"TareaMenu.h"
 	"PersonalMenu.h"
+	"ReporteMenu.h"
 
 1758801879 e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\tareamenu.h
 	"Menu.h"
 	"TareaManager.h"
 
-1758204846 e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\tareamanager.h
+1758808586 e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\tareamanager.h
 	"TareaArchivo.h"
+	"PersonalArchivo.h"
 
 1758206244 e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\tareaarchivo.h
 	"Tarea.h"
 
-1758203916 e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\tarea.h
+1758807122 e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\tarea.h
 	<string>
 
 1758804607 source:e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\main.cpp
 	<iostream>
 	"AppMenu.h"
 
-1758804284 source:e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\tarea.cpp
+1758807052 source:e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\tarea.cpp
 	"Tarea.h"
 	<cstring>
 
@@ -101,11 +103,12 @@
 	<iostream>
 	"TareaArchivo.h"
 
-1758805410 source:e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\tareamanager.cpp
+1758809252 source:e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\tareamanager.cpp
 	<iostream>
 	"TareaManager.h"
 	"Tarea.h"
 	"utils.h"
+	"Personal.h"
 
 1758801958 source:e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\tareamenu.cpp
 	<iostream>
@@ -117,7 +120,7 @@
 	"Menu.h"
 	"PersonalManager.h"
 
-1758802048 source:e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\personalmenu.cpp
+1758806126 source:e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\personalmenu.cpp
 	<iostream>
 	"PersonalMenu.h"
 
@@ -135,18 +138,18 @@
 1758804071 source:e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\ficticio.cpp
 	<iostream>
 
-1758805380 e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\utils.h
+1758812990 e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\utils.h
 	<string>
 
-1758805993 source:e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\utils.cpp
+1758812988 source:e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\utils.cpp
 	<iostream>
 	"utils.h"
 
-1758806002 source:e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\personalarchivo.cpp
+1758808758 source:e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\personalarchivo.cpp
 	<iostream>
 	"PersonalArchivo.h"
 
-1758805855 e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\personalarchivo.h
+1758808768 e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\personalarchivo.h
 	<string>
 	"Personal.h"
 
@@ -158,4 +161,21 @@
 	"PersonalManager.h"
 	"Personal.h"
 	"utils.h"
+
+1758810315 e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\reportemenu.h
+	"Menu.h"
+	"ReporteManager.h"
+
+1758812533 e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\reportemanager.h
+	"TareaArchivo.h"
+	"PersonalArchivo.h"
+
+1758812961 source:e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\reportemanager.cpp
+	<iostream>
+	"ReporteManager.h"
+	"utils.h"
+
+1758810378 source:e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\reportemenu.cpp
+	<iostream>
+	"ReporteMenu.h"
 
