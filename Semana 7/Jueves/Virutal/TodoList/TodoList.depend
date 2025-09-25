@@ -1,0 +1,161 @@
+# depslib dependency file v1.0
+1757603999 source:e:\github\educacion\utn\programacion2-20252c-m\semana 5\jueves\virtual\todolist\tarea.cpp
+	"Tarea.h"
+	<cstring>
+
+1757603978 e:\github\educacion\utn\programacion2-20252c-m\semana 5\jueves\virtual\todolist\tarea.h
+	<string>
+
+1757602514 source:e:\github\educacion\utn\programacion2-20252c-m\semana 5\jueves\virtual\todolist\tareaarchivo.cpp
+	<iostream>
+	"TareaArchivo.h"
+
+1757602402 e:\github\educacion\utn\programacion2-20252c-m\semana 5\jueves\virtual\todolist\tareaarchivo.h
+	"Tarea.h"
+
+1757603458 source:e:\github\educacion\utn\programacion2-20252c-m\semana 5\jueves\virtual\todolist\main.cpp
+	<iostream>
+	"Tarea.h"
+	"TareaArchivo.h"
+	"TareaManager.h"
+
+1757604074 e:\github\educacion\utn\programacion2-20252c-m\semana 5\jueves\virtual\todolist\tareamanager.h
+	"TareaArchivo.h"
+
+1757604169 source:e:\github\educacion\utn\programacion2-20252c-m\semana 5\jueves\virtual\todolist\tareamanager.cpp
+	<iostream>
+	"TareaManager.h"
+	"Tarea.h"
+
+1758198138 source:e:\github\educacion\utn\programacion2-20252c-m\semana 6\jueves\virutal\todolist\main.cpp
+	<iostream>
+	"AppMenu.h"
+
+1758203916 e:\github\educacion\utn\programacion2-20252c-m\semana 6\jueves\virutal\todolist\tarea.h
+	<string>
+
+1758206244 e:\github\educacion\utn\programacion2-20252c-m\semana 6\jueves\virutal\todolist\tareaarchivo.h
+	"Tarea.h"
+
+1758204846 e:\github\educacion\utn\programacion2-20252c-m\semana 6\jueves\virutal\todolist\tareamanager.h
+	"TareaArchivo.h"
+
+1758202957 source:e:\github\educacion\utn\programacion2-20252c-m\semana 6\jueves\virutal\todolist\tareaarchivo.cpp
+	<iostream>
+	"TareaArchivo.h"
+
+1758203094 source:e:\github\educacion\utn\programacion2-20252c-m\semana 6\jueves\virutal\todolist\tarea.cpp
+	"Tarea.h"
+	<cstring>
+
+1758206228 source:e:\github\educacion\utn\programacion2-20252c-m\semana 6\jueves\virutal\todolist\tareamanager.cpp
+	<iostream>
+	"TareaManager.h"
+	"Tarea.h"
+
+1758197251 e:\github\educacion\utn\programacion2-20252c-m\semana 6\jueves\virutal\todolist\tareamenu.h
+	"TareaManager.h"
+
+1758204836 source:e:\github\educacion\utn\programacion2-20252c-m\semana 6\jueves\virutal\todolist\tareamenu.cpp
+	<iostream>
+	"TareaMenu.h"
+
+1758197882 e:\github\educacion\utn\programacion2-20252c-m\semana 6\jueves\virutal\todolist\appmenu.h
+	"TareaMenu.h"
+
+1758199772 source:e:\github\educacion\utn\programacion2-20252c-m\semana 6\jueves\virutal\todolist\appmenu.cpp
+	<iostream>
+	"AppMenu.h"
+
+1758802185 source:e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\appmenu.cpp
+	<iostream>
+	"AppMenu.h"
+
+1758802407 e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\appmenu.h
+	"Menu.h"
+	"TareaMenu.h"
+	"PersonalMenu.h"
+
+1758801879 e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\tareamenu.h
+	"Menu.h"
+	"TareaManager.h"
+
+1758204846 e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\tareamanager.h
+	"TareaArchivo.h"
+
+1758206244 e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\tareaarchivo.h
+	"Tarea.h"
+
+1758203916 e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\tarea.h
+	<string>
+
+1758804607 source:e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\main.cpp
+	<iostream>
+	"AppMenu.h"
+
+1758804284 source:e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\tarea.cpp
+	"Tarea.h"
+	<cstring>
+
+1758206228 source:e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\tareaarchivo.cpp
+	<iostream>
+	"TareaArchivo.h"
+
+1758805410 source:e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\tareamanager.cpp
+	<iostream>
+	"TareaManager.h"
+	"Tarea.h"
+	"utils.h"
+
+1758801958 source:e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\tareamenu.cpp
+	<iostream>
+	"TareaMenu.h"
+
+1758804795 e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\menu.h
+
+1758806112 e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\personalmenu.h
+	"Menu.h"
+	"PersonalManager.h"
+
+1758802048 source:e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\personalmenu.cpp
+	<iostream>
+	"PersonalMenu.h"
+
+1758804731 source:e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\menu.cpp
+	<iostream>
+	"Menu.h"
+
+1758806062 source:e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\personal.cpp
+	<cstring>
+	"Personal.h"
+
+1758806062 e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\personal.h
+	<string>
+
+1758804071 source:e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\ficticio.cpp
+	<iostream>
+
+1758805380 e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\utils.h
+	<string>
+
+1758805993 source:e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\utils.cpp
+	<iostream>
+	"utils.h"
+
+1758806002 source:e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\personalarchivo.cpp
+	<iostream>
+	"PersonalArchivo.h"
+
+1758805855 e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\personalarchivo.h
+	<string>
+	"Personal.h"
+
+1758805122 e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\personalmanager.h
+	"PersonalArchivo.h"
+
+1758805783 source:e:\github\educacion\utn\programacion2-20252c-m\semana 7\jueves\virutal\todolist\personalmanager.cpp
+	<iostream>
+	"PersonalManager.h"
+	"Personal.h"
+	"utils.h"
+

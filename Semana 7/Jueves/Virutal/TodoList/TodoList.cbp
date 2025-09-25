@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="TodoList" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/TodoList" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="../TodoList" />
+					<Add directory="./" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/TodoList" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="../TodoList" />
+					<Add directory="./" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="AppMenu.cpp" />
+		<Unit filename="AppMenu.h" />
+		<Unit filename="Menu.cpp" />
+		<Unit filename="Menu.h" />
+		<Unit filename="Personal.cpp" />
+		<Unit filename="Personal.h" />
+		<Unit filename="PersonalArchivo.cpp" />
+		<Unit filename="PersonalArchivo.h" />
+		<Unit filename="PersonalManager.cpp" />
+		<Unit filename="PersonalManager.h" />
+		<Unit filename="PersonalMenu.cpp" />
+		<Unit filename="PersonalMenu.h" />
+		<Unit filename="Tarea.cpp" />
+		<Unit filename="Tarea.h" />
+		<Unit filename="TareaArchivo.cpp" />
+		<Unit filename="TareaArchivo.h" />
+		<Unit filename="TareaManager.cpp" />
+		<Unit filename="TareaManager.h" />
+		<Unit filename="TareaMenu.cpp" />
+		<Unit filename="TareaMenu.h" />
+		<Unit filename="ficticio.cpp" />
+		<Unit filename="main.cpp" />
+		<Unit filename="utils.cpp" />
+		<Unit filename="utils.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>
