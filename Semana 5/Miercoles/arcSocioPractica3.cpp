@@ -8,12 +8,12 @@
 using namespace std;
 
 ///Agregar un menu con las opciones:
-/*    
+/*
     * Agregar registro
     * Mostrar registros
     * Buscar registro
 
-Al agregar un registro se debe impedir que haya 2 socios con el mismo DNI
+Al agregar un registro se debe impedir que haya 2 socios con el mismo ID
 
 Buscar registro: debe pedir el ingreso de un DNI, y mostrar si existe un socio con ese DNI.
 Caso contrario debe informar que no existe ese socio.
@@ -50,7 +50,7 @@ class Fecha{
        bool esCorrecta();
 };
 
-///Desarrollo de los m�todos
+///Desarrollo de los métodos
 void Fecha::Cargar(){
     int _dia, _mes, _anio;
     cout<<"INGRESAR EL DIA ";
@@ -115,11 +115,10 @@ private:
 ///    int diaNac, mesNac, anioNac; alternativa sin composici�n
     Direccion domicilio;
 public:
-    void Cargar(int _dni=0);    ///pasamos valor por omisión.
+    void Cargar();
     void Mostrar();
     ///gets
     int getIdSocio(){return IdSocio;}
-    int getDni(){return DNI;}
     const char* getApellido(){return apellido;}
     Fecha getFechaNacimiento(){return fechaNacimiento;}
     Direccion getDomicilio(){return domicilio;}
@@ -132,17 +131,10 @@ public:
     }
 
 };
-///M�todos de Socio
-void Socio::Cargar(int _dni){
-    if(_dni==0){    //si es 0, es porque no se pasó dni por parámetro, se pide al socio que lo ingrese.
-        cout<<"DNI ";
-        cin>>DNI;
-    }
-    else{           //si NO ES CERO, es porque ya se lo pedimos para verificar si existia, no se lo volvemos a pedir.
-        DNI=_dni;
-    }
+///Métodos de Socio
+void Socio::Cargar(){
     cout<<"IDSOCIO ";
-    cin>>IdSocio;       //tratar que los ID siempre sean autoincrementables, ya veremos como.
+    cin>>IdSocio;
     cout<<"NOMBRE ";
     cin>>nombre;
     cout<<"APELLIDO ";
@@ -166,58 +158,56 @@ void Socio::Mostrar(){
 }
 ///FIN CLASE SOCIO
 ///PROTOTIPO FUNCIONES GLOBALES
-
+bool agregarRegistroSocio();
 bool escribirRegistroSocio(Socio reg);
 bool mostrarRegistroSocio();
-void buscarRegistro(int _dni);
+int buscarRegistroSocio(int idSocio);///si encuentra el id, que devuelva la pos del reg dentro del archivo. Si no -1
 void buscarRegistro(const char* apellido);
-bool socioExiste(int _dni);
-bool agregarSocioNuevo(int dni);
+
+int contarRegistrosSocios();///si devuelve 0 es porque no tiene registros y existe; -1 si no existe
+void buscarSocio();
+Socio leerRegistroSocio(int posReg);
+///FIN PROTOTIPOS
 
 int main(){
     Socio nuevo;
-    int opcion;    
-    int _dni=0;
-    char _apellido[30];
-    
+    int opcion;
+    //int idSocio=0;
+    //char _apellido[30];
+
     while(true){
         system("cls");
 
-        cout<<"Seleccione opción del menu: "<<endl;
+        cout<<"Seleccione opcion del menu: "<<endl;
         cout<<"1. Agregar registro"<<endl;
         cout<<"2. Listar registros"<<endl;
         cout<<"3. Buscar registro"<<endl;
+        cout<<"4. Contar registros"<<endl;
         cout<<"0. Salir"<<endl;
 
         cin>>opcion;
-
+        system("cls");
         switch (opcion){
-            case 1:
-                cout<<"Ingrese el dni: ";
-                cin>>_dni;
-                if(agregarSocioNuevo(_dni)){
+            case 1: if(agregarRegistroSocio()){
                     cout<<"Registro agregado"<<endl;
-                }
-                else{
-                    cout<<"Ya existe"<<endl;
-                }
+                    }
+                    else{
+                        cout<<"NO SE PUDO AGREGAR EL REGISTRO"<<endl;
+                    }
                 break;
-            case 2: 
+            case 2:
                 mostrarRegistroSocio();
                 break;
-            case 3:
-                cout<<"Indique el dni del socio a buscar: ";
-                cin>>_dni;
-                buscarRegistro(_dni);
-                // cout<<"Indique el apellido a buscar"<<endl;
-                // cin>>_apellido;
-                // buscarRegistro(_apellido);
-                break;
+            case 3: buscarSocio();
+                    break;
+
+            case 4: cout<<contarRegistrosSocios()<<endl;
+                    break;
             case 0:
                 return 0;
                 break;
             default:
-                cout<<"Opcion incorrecta!"<<endl;  
+                cout<<"Opcion incorrecta!"<<endl;
         }
         system("pause");
         system("cls");
@@ -231,6 +221,20 @@ int main(){
 	return 0;
 
 }
+
+bool agregarRegistroSocio(){
+    Socio reg;
+    reg.Cargar();
+    int id=reg.getIdSocio();
+    int posReg=buscarRegistroSocio(id);
+    if(posReg!=-1){
+        cout<<"NO SE PUEDE REPETIR EL ID";
+        return false;
+    }
+    bool escribio= escribirRegistroSocio(reg);
+    return escribio;
+}
+
 
 bool escribirRegistroSocio(Socio reg){
     FILE *pSocio;
@@ -260,19 +264,23 @@ bool mostrarRegistroSocio(){
 }
 
 
-void buscarRegistro(int _dni){
+int buscarRegistroSocio(int idSocio){
     Socio reg;
     FILE *pSocio;
     pSocio=fopen("socios.dat","rb");
-    if(pSocio==nullptr);
-
-    while(fread(&reg,sizeof(Socio),1, pSocio)==1){
-        if(reg.getDni()==_dni){
-            reg.Mostrar();
-        }
+    if(pSocio==nullptr){
+        return -1;
     }
-
+    int pos=0;
+    while(fread(&reg,sizeof(Socio),1, pSocio)==1){
+        if(reg.getIdSocio()==idSocio){
+            fclose(pSocio);
+            return pos;
+        }
+        pos++;
+    }
     fclose(pSocio);
+    return -1;
 }
 
 void buscarRegistro(const char* apellido){
@@ -290,29 +298,100 @@ void buscarRegistro(const char* apellido){
     fclose(pSocio);
 }
 
-bool socioExiste(int _dni){
+int contarRegistrosSocios(){
+    FILE *pSocio;
+    pSocio=fopen("socios.dat","rb");
+    if(pSocio==nullptr){
+        return -1;
+    }
+    /*
+    fseek(puntero_file, cuánto_quiero_desplazar, desde_donde)
+
+            0   SEEK_SET-> desde el principio del archivo
+            1   SEEK_CUR-> posición actual del archivo
+            2   SEEK_END-> eof (fin del archivo)
+
+    fssek(p, 0, 0);-> el puntero al principio del archivo
+    fseek(p, 0, 2),-> el puntero va al final del archivo
+    fseek(p, sizeof(Socio), SEEK_CUR);-> SE ADELANTA UN REGISTRO
+      */
+    fseek(pSocio,0,2);/// permite manipular la posición del puntero en el archivo
+    int cantBytes=ftell(pSocio);///me dice la cantidad de bytes que hay desde el principio del archivo a la posición actual
+    int cantReg=cantBytes/sizeof(Socio);
+    fclose(pSocio);
+    return cantReg;
+}
+
+
+/*
+int contarRegistrosSocios(){
     Socio reg;
     FILE *pSocio;
     pSocio=fopen("socios.dat","rb");
-    if(pSocio==nullptr);
-
-    while(fread(&reg,sizeof(Socio),1, pSocio)==1){
-        if(reg.getDni()==_dni){
-            return true;
-        }
+    if(pSocio==nullptr){
+        return -1;
     }
-
+    int pos=0;
+    while(fread(&reg,sizeof(Socio),1, pSocio)==1){
+        pos++;
+    }
     fclose(pSocio);
-    return false;
+    return pos;
+}
+*/
+void buscarSocio(){
+    Socio reg;
+    int id;
+    cout<<"INGRESE LA ID DEL SOCIO A BUSCAR ";
+    cin>>id;
+    int pos=buscarRegistroSocio(id);
+    if(pos==-1){
+        cout<<"NO EXISTE EL SOCIO "<<endl;
+        return;
+    }
+    reg=leerRegistroSocio(pos);
+    reg.Mostrar();
 }
 
-bool agregarSocioNuevo(int dni){
+
+/*Socio leerRegistroSocio(int posReg){
     Socio reg;
-    if(socioExiste(dni)){
-        return false;
+    reg.setIdSocio(-1);
+    FILE *pSocio;
+    pSocio=fopen("socios.dat","rb");
+    if(pSocio==nullptr){
+        return reg;
     }
-    else{
-        reg.Cargar(dni);
-        escribirRegistroSocio(reg);
+
+    int pos=0;
+    while(fread(&reg,sizeof(Socio),1, pSocio)==1){
+        if(pos==posReg){
+            fclose(pSocio);
+            return reg;
+        }
+        pos++;
     }
+    fclose(pSocio);
+    reg.setIdSocio(-1);
+    return reg;
+
+}
+*/
+
+Socio leerRegistroSocio(int posReg){
+    Socio reg;
+    reg.setIdSocio(-1);
+    FILE *pSocio;
+    pSocio=fopen("socios.dat","rb");
+    if(pSocio==nullptr){
+        return reg;
+    }
+    fseek(pSocio, posReg*sizeof(Socio),0);///ubico el puntero al inicio del registro que quiero leer
+
+    fread(&reg,sizeof(Socio),1, pSocio);///leo el registro
+
+    fclose(pSocio);
+
+    return reg;
+
 }
