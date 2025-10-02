@@ -1,0 +1,42 @@
+# depslib dependency file v1.0
+1759272959 source:c:\users\daniel kloster\documents\curso ejemplos c\programacion ii\2025 c2 martes\30-09\abml_libros\main.cpp
+	<iostream>
+	<cstring>
+	"Fecha.h"
+	"Libro.h"
+	"ArchivoLibro.h"
+	"funciones_globales.h"
+
+1759264148 c:\users\daniel kloster\documents\curso ejemplos c\programacion ii\2025 c2 martes\30-09\abml_libros\fecha.h
+
+1759273030 c:\users\daniel kloster\documents\curso ejemplos c\programacion ii\2025 c2 martes\30-09\abml_libros\libro.h
+
+1759265632 c:\users\daniel kloster\documents\curso ejemplos c\programacion ii\2025 c2 martes\30-09\abml_libros\archivolibro.h
+
+1759271654 source:c:\users\daniel kloster\documents\curso ejemplos c\programacion ii\2025 c2 martes\30-09\abml_libros\archivolibros.cpp
+	<iostream>
+	<cstring>
+	"Fecha.h"
+	"Libro.h"
+	"ArchivoLibro.h"
+
+1759273291 source:c:\users\daniel kloster\documents\curso ejemplos c\programacion ii\2025 c2 martes\30-09\abml_libros\fecha.cpp
+	<iostream>
+	"Fecha.h"
+
+1759321405 source:c:\users\daniel kloster\documents\curso ejemplos c\programacion ii\2025 c2 martes\30-09\abml_libros\libro.cpp
+	<iostream>
+	<cstring>
+	"Fecha.h"
+	"Libro.h"
+	"funciones_globales.h"
+
+1759273558 c:\users\daniel kloster\documents\curso ejemplos c\programacion ii\2025 c2 martes\30-09\abml_libros\funciones_globales.h
+
+1759322087 source:c:\users\daniel kloster\documents\curso ejemplos c\programacion ii\2025 c2 martes\30-09\abml_libros\funciones_globales.cpp
+	<iostream>
+	"Fecha.h"
+	"Libro.h"
+	"ArchivoLibro.h"
+	"funciones_globales.h"
+
